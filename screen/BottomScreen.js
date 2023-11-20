@@ -1,12 +1,17 @@
-import { StyleSheet,  } from "react-native";
+import { StyleSheet, View } from "react-native";
 import PrimaryButton from "../components/PrmaryButton";
-import PrayerTimesList from "../components/PrayerTimesList";
-
-
 
 function BottomScreen() {
   return (
-    <PrayerTimesList></PrayerTimesList>
+    <View style={styles.container}>
+      
+       <PrimaryButton>Fajar</PrimaryButton> 
+       <PrimaryButton>Dhura</PrimaryButton> 
+       <PrimaryButton>Dhura</PrimaryButton> 
+       <PrimaryButton>Dhura</PrimaryButton> 
+       <PrimaryButton>Dhura</PrimaryButton> 
+      
+    </View>
   );
 }
 export default BottomScreen;
