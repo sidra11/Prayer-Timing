@@ -9,6 +9,7 @@ function MainScreen() {
       <View>
         <TextInput>Date </TextInput>
         <Text>New add</Text>
+        <Text>New feature</Text>
       </View>
       
     </View>
