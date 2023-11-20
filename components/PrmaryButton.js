@@ -1,4 +1,4 @@
-import { View, Text, Pressable, StyleSheet } from 'react-native';
+import { View, Text, Pressable, StyleSheet, TextInput } from 'react-native';
 function PrimaryButton({children})
 {
     function onPressHandler (){
@@ -16,7 +16,7 @@ function PrimaryButton({children})
             android_ripple={{ color: '#640233' }}
           >
             <Text style={styles.buttonText}>{children}</Text>
-            <Text style={styles.timeText}>{children}</Text>
+            <TextInput style={styles.timeText}>Time</TextInput>
           </Pressable>
         </View>
       );
