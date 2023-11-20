@@ -1,10 +1,10 @@
 import { Button, StyleSheet, Text, TextInput, View } from "react-native";
-
-function MainScreen() {
+import LocationPicker from "../components/LocationPicker";
+function LocationScreen() {
   return (
     <View style={styles.container}>
       <View>
-        <Text style={styles.text}>Time </Text>
+        <LocationPicker/>
       </View>
       <View>
         <TextInput>Date </TextInput>
@@ -40,4 +40,4 @@ const styles = StyleSheet.create({
   
 });
 
-export default MainScreen;
+export default LocationScreen;
