@@ -8,6 +8,7 @@ function MainScreen() {
       </View>
       <View>
         <TextInput>Date </TextInput>
+        <Text>New add</Text>
       </View>
       
     </View>
