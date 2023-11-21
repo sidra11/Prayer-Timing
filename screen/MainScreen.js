@@ -8,11 +8,6 @@ function MainScreen() {
       </View>
       <View>
         <TextInput>Date </TextInput>
-<<<<<<< HEAD
-=======
-        <Text>New add</Text>
-        <Text>New feature</Text>
->>>>>>> 370b2b0 (add the new feature)
       </View>
       
     </View>
