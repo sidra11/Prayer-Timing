@@ -1,35 +1,24 @@
-
 import { StyleSheet, Text, View } from "react-native";
+import moment from "moment";
 
 function TopScreen(props) {
-  const currentDate = new Date();
-  const year = currentDate.getFullYear();
-  const month = currentDate.getMonth() + 1;
-  const day = currentDate.getDate();
- 
-  const formattedDate = currentDate.toLocaleDateString();
-  console.log(currentDate);
+  return (
+    <View>
+      <Text style={styles.text}>{moment().format("DD-MMM-YYYY")}</Text>
+    </View>
+  );
+}
 
-    return (
-        <View>
-          
-          <Text style={styles.text} >{formattedDate}</Text>
-        </View>
+const styles = StyleSheet.create({
+  text: {
+    margin: 10,
+    marginTop: 100,
+    padding: 10,
+    borderWidth: 2,
+    borderColor: "red",
+    color: "white",
+    fontSize:20,
+  },
+});
 
-    );
-  }
-
-  const styles = StyleSheet.create({
-
-    text: {
-      margin: 10,
-      marginTop:100,
-      padding: 10,
-      borderWidth: 2,
-      borderColor: "red",
-      color:'white'
-    },
-    
-  });
-  
-  export default TopScreen;
+export default TopScreen;

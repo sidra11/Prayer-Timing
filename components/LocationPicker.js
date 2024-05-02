@@ -5,7 +5,7 @@ import {
   useForegroundPermissions,
   PermissionStatus,
 } from "expo-location";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { getAddress } from "../util/location";
 
 function LocationPicker() {
@@ -33,16 +33,10 @@ function LocationPicker() {
           pickedLocation.lat,
           pickedLocation.lng
         );
-
-       
-        console.log(address,'adress');
-        setAddress(address)
-       
+        setAddress(address);
       }
-     
     }
-handleLocation();
-    
+    handleLocation();
   }, [pickedLocation]);
 
   async function getLocationHandler() {
@@ -52,18 +46,16 @@ handleLocation();
     }
     const pickedLocation = await getCurrentPositionAsync();
 
-    setPickedLocation({lat:pickedLocation.coords.latitude,lng: pickedLocation.coords.longitude,});
-    console.log(pickedLocation, "kkk");
-
-    
+    setPickedLocation({
+      lat: pickedLocation.coords.latitude,
+      lng: pickedLocation.coords.longitude,
+    });
   }
   return (
     <View>
       <IconButton icon="location" color="black" onPress={getLocationHandler}>
         {address ? (
-          <Text style={styles.locationText}>
-            {address}
-          </Text>
+          <Text style={styles.locationText}>{address}</Text>
         ) : (
           <Text style={styles.errorText}>Location data not available</Text>
         )}
